@@ -15,8 +15,10 @@ import {
   MaterialIcons,
   FontAwesome,
 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const currentDate = new Date();
   const formattedDate = currentDate.toLocaleDateString("en-US", {
     month: "short",
@@ -72,7 +74,10 @@ const HomeScreen = () => {
           <Text style={styles.servicesTitle}>Services</Text>
         </View>
         <View style={styles.servicesGrid}>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Transfer")}
+          >
             <FontAwesome6
               name="money-bill-transfer"
               size={24}
@@ -80,27 +85,45 @@ const HomeScreen = () => {
             />
             <Text style={styles.serviceText}>Transfer</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("TopUp")}
+          >
             <Ionicons name="phone-portrait-outline" size={30} color="#A805C2" />
             <Text style={styles.serviceText}>Top Up</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Utilities")}
+          >
             <Ionicons name="home-outline" size={30} color="#A805C2" />
             <Text style={styles.serviceText}>Utilities</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Help")}
+          >
             <FontAwesome5 name="hands-helping" size={24} color="#A805C2" />
             <Text style={styles.serviceText}>Help</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Banking")}
+          >
             <FontAwesome name="bank" size={24} color="#A805C2" />
             <Text style={styles.serviceText}>Banking</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Events")}
+          >
             <Ionicons name="calendar-outline" size={30} color="#A805C2" />
             <Text style={styles.serviceText}>Events</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Utility")}
+          >
             <Entypo
               name="creative-commons-attribution"
               size={24}
@@ -108,15 +131,24 @@ const HomeScreen = () => {
             />
             <Text style={styles.serviceText}>Utility</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("GovernmentServices")}
+          >
             <MaterialIcons name="real-estate-agent" size={30} color="#A805C2" />
-            <Text style={styles.serviceText}>Top Up</Text>
+            <Text style={styles.serviceText}>Government Services</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Travel")}
+          >
             <Ionicons name="airplane-sharp" size={24} color="#A805C2" />
             <Text style={styles.serviceText}>Travel</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("PayFor")}
+          >
             <FontAwesome6
               name="hand-holding-dollar"
               size={24}
@@ -124,9 +156,12 @@ const HomeScreen = () => {
             />
             <Text style={styles.serviceText}>Pay for</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.serviceItem}>
+          <TouchableOpacity
+            style={styles.serviceItem}
+            onPress={() => navigation.navigate("Entertainment")}
+          >
             <Entypo name="video" size={30} color="#A805C2" />
-            <Text style={styles.serviceText}>Pay for</Text>
+            <Text style={styles.serviceText}>Entertainment</Text>
           </TouchableOpacity>
         </View>
       </View>
