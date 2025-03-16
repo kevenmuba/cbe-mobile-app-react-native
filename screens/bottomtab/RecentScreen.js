@@ -3,17 +3,23 @@ import { View, Text, StyleSheet } from "react-native";
 
 const RecentScreen = () => {
   return (
-    <View style={styles.screenContainer}>
-      <Text>Recent</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Recent Screen</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  screenContainer: {
+  container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#f8f8f8",
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#A805C2",
   },
 });
 

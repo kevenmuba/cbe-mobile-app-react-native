@@ -6,12 +6,6 @@ const TransferScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Transfer Screen</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => console.log("Transfer initiated")}
-      >
-        <Text style={styles.buttonText}>Initiate Transfer</Text>
-      </TouchableOpacity>
     </View>
   );
 };

@@ -1,13 +1,13 @@
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
 
-const TopUpScreen = () => {
+export default function AboutScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Top Up Screen</Text>
+      <Text style={styles.text}>About Screen</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,5 +22,3 @@ const styles = StyleSheet.create({
     color: "#A805C2",
   },
 });
-
-export default TopUpScreen;

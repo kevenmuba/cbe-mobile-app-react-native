@@ -42,7 +42,7 @@ const HomeScreen = () => {
       <View style={styles.header}>
         <View style={styles.logoContainer}>
           <Image
-            source={require("../assets/images/cbe_logo2.jpg")}
+            source={require("../../assets/images/cbe_logo2.jpg")}
             style={styles.logo}
           />
           <View>
